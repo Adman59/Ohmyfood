@@ -6,7 +6,9 @@
 @import "./utils/mixins";
 @import "./utils/placeholders";
 
-@import "./components/btn";
+@import "./components/btn.scss";
+@import "./components/typography.scss";
+@import "./components/steps.scss";
 /* Import des views */
 
 @import "./layouts/header.scss";

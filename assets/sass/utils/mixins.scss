@@ -1,0 +1,4 @@
+/* Ombre des boutons et des cards */
+@mixin shadow {
+    box-shadow: 2px 4px 15px darken($gris-clair, 10%);
+  }

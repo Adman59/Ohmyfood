@@ -1,8 +1,9 @@
 .btn {
-
+    text-decoration: none;
     padding: 1em 1.5em;
     color: $txt-fond-sombre;
     transition: 250ms;
+    @include shadow;
     
     &--gradient {
         background-image: radial-gradient(100% 50% at 20% 10%,

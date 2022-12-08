@@ -1,0 +1,32 @@
+main {
+    font-size: $txt-font-size;
+    font-family: $font-primary;
+}
+
+h1, h2, h3 {
+    color: $txt-fond-clair;
+    font-weight: $font-bold; 
+    font-family: $font-primary;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    &.Logo {
+        font-family: $font-secondary;
+        font-weight: $font-regular;
+    }
+}
+
+h2 {
+    font-size: $h2-font-size;
+}
+
+h3 {
+    font-size: $h3-font-size;
+}
+
+ul {
+    li {
+        list-style-type: none;
+    }
+}

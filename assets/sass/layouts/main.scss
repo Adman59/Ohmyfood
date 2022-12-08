@@ -1,22 +1,28 @@
 /* Début Main */
 main{
-    font-family: 'Roboto', sans-serif;
 
     & #SectionLocalisation{
         @extend %grid-center;
-        padding: 1em;
+        padding: 0;
         background: #eaeaea;
         background: linear-gradient(180deg,
             rgba(173, 173, 173, .35) 0%,
             rgba(234, 234, 234, .75) 15%,
             rgba(234, 234, 234, 1) 100%);
 
-        & i {
-            padding: 0 0.5em 0 0;
+        & p {
+            font-weight: 600;
+
+            & i {
+                padding: 0 0.5em 0 0;
+            }
         }
+
     }
 
     #SectionIntro {
+        @extend %grid-center;
+        padding: 1em;
         text-align: center;
     }
 

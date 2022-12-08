@@ -1,16 +1,19 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* Import des utilitaires */
-main #SectionLocalisation, header {
+/* Ombre des boutons et des cards */
+main #SectionIntro, main #SectionLocalisation, header {
   display: grid;
   align-items: center;
   justify-items: center;
 }
 
 .btn {
+  text-decoration: none;
   padding: 1em 1.5em;
   color: #ffffff;
   transition: 250ms;
+  box-shadow: 2px 4px 15px #c9c9c9;
 }
 .btn--gradient {
   background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
@@ -23,28 +26,60 @@ main #SectionLocalisation, header {
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
 }
 
+main {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3 {
+  color: #000000;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h1.Logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+#sectionSteps ul {
+  display: flex;
+}
+
 /* Import des views */
 /* Début Header */
 header {
   padding: 1em;
 }
-header .logo {
-  font-size: 2rem;
-  font-family: "Shrikhand", cursive;
-}
 
 /* Début Main */
-main {
-  font-family: "Roboto", sans-serif;
-}
 main #SectionLocalisation {
-  padding: 1em;
+  padding: 0;
   background: #eaeaea;
   background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, rgb(234, 234, 234) 100%);
 }
-main #SectionLocalisation i {
+main #SectionLocalisation p {
+  font-weight: 600;
+}
+main #SectionLocalisation p i {
   padding: 0 0.5em 0 0;
 }
 main #SectionIntro {
+  padding: 1em;
   text-align: center;
 }
