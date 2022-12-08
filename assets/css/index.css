@@ -7,6 +7,22 @@ main #SectionLocalisation, header {
   justify-items: center;
 }
 
+.btn {
+  padding: 1em 1.5em;
+  color: #ffffff;
+  transition: 250ms;
+}
+.btn--gradient {
+  background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
+}
+.btn--radius {
+  border-radius: 2em;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+}
+
 /* Import des views */
 /* Début Header */
 header {

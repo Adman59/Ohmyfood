@@ -14,7 +14,7 @@
 <body>
 
     <header>
-        <div class="logo-test">Ohmyfood</div>
+        <h1 class="Logo">Ohmyfood</h1>
     </header>
 
     <main>
@@ -24,38 +24,45 @@
         </section>
 
         <section id="SectionIntro">
-            <h1>Réservez le menu qui vous convient</h1>
+            <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <div class="btn">
-                <a href="#">Explorer nos restaurants</a>
-            </div>
+            <a class="btn btn--radius btn--gradient" href="#">Explorer nos restaurants</a>
+
         </section>
 
         <div id="SectionFonctionnement">
             <h2>Fonctionnement</h2>
-            <div class="step step-1">Choisissez un restaurant</div>
-            <div class="step step-2">Composez votre menu</div>
-            <div class="step step-3">Dégustez au restaurant</div>
+            <ul>
+                <li>
+                    <p><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</p>
+                </li>
+                <li>
+                    <p><i class="fas fa-mobile-alt"></i>Composez votre menu</p>
+                </li>
+                <li>
+                    <p><i class="fas fa-mobile-alt"></i>Dégustez au restaurant</p>
+                </li>
+            </ul>
         </div>
 
         <article>
             <h2>Restaurant</h2>
             <!-- Début de la card du restau la palette du goût -->
-            <div class="card">
-                <div class="card__image">
-                    <img src="" alt="">
-                    <div class="card_image--tag">Nouveau</div>
-                </div>
-                <div class="card__content">
-                    <div class="card__content__description">
-                        <div class="card__content__description__title">La palette du goût</div>
-                        <p class="card__content__description__localisation">Ménilmontant</p>
-                    </div>
-                    <div class="card__content__fav">
-                        <i></i>
-                    </div>
-                </div>
-            </div>
+            <ul class="ContainerCard">
+                <li class="Card">
+                    <span class="Card__Boxnews">Nouveau</span>
+                    <img class="Card__Image" src="" alt="">
+                    <h3 class="Card__Title">La palette du goût</h3>
+                    <p class="Card__Localisation">Ménilmontant</p>
+                    <span class="Btn__Like">
+                        <i class="far fa-heart heart-away"></i>
+                        <i class="fas fa-heart heart-hover"></i>
+                    </span>
+
+                </li>
+
+
+            </ul>
             <!-- Fin de la card du restau la palette du goût -->
         </article>
 
