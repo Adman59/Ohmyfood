@@ -1,0 +1,9 @@
+/* Début Header */
+header{
+    @extend %grid-center;
+    padding: 1em;
+    & .logo{
+        font-size: 2rem;
+        font-family: 'Shrikhand', cursive;
+    }
+}
