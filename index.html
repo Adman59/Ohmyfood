@@ -34,36 +34,108 @@
             <h2>Fonctionnement</h2>
             <ul>
                 <li>
+                    <span class="Step__Number">1</span>
                     <p><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</p>
                 </li>
                 <li>
+                    <span class="Step__Number">2</span>
                     <p><i class="fa-solid fa-list"></i>Composez votre menu</p>
                 </li>
                 <li>
+                    <span class="Step__Number">3</span>
                     <p><i class="fa-solid fa-store"></i>Dégustez au restaurant</p>
                 </li>
             </ul>
         </section>
 
-        <article>
+        <article id="ListingRestaurant">
             <h2>Restaurant</h2>
-            <!-- Début de la card du restau la palette du goût -->
             <ul class="ContainerCard">
+                <!-- Début de la card du restau la palette du goût -->
                 <li class="Card">
-                    <span class="Card__Boxnews">Nouveau</span>
-                    <img class="Card__Image" src="" alt="">
-                    <h3 class="Card__Title">La palette du goût</h3>
-                    <p class="Card__Localisation">Ménilmontant</p>
-                    <span class="Btn__Like">
-                        <i class="far fa-heart heart-away"></i>
-                        <i class="fas fa-heart heart-hover"></i>
-                    </span>
-
+                    <a href="#" class="Card__Lien">
+                        <div class="Card__Image">
+                            <span class="Card__Boxnews">Nouveau</span>
+                            <img src="/assets/images/la_palette_du_gout.jpg"
+                                alt="Image du restaurant La palette du goût">
+                        </div>
+                        <div class="Card__Content">
+                            <div class="Card__Content__Desc">
+                                <h3 class="Card__Title">La palette du goût</h3>
+                                <p class="Card__Localisation">Ménilmontant</p>
+                            </div>
+                            <span class="Card__Content_Like">
+                                <i class="far fa-heart heart-away"></i>
+                                <i class="fas fa-heart heart-hover"></i>
+                            </span>
+                        </div>
+                    </a>
                 </li>
+                <!-- Fin de la card du restau la palette du goût -->
 
+                <!-- Début de la card du restau la note enchantée -->
+                <li class="Card">
+                    <a href="#" class="Card__Lien">
+                        <div class="Card__Image">
+                            <span class="Card__Boxnews">Nouveau</span>
+                            <img src="/assets/images/la_note_enchantee.jpg" alt="Image du restaurant La note enchantée">
+                        </div>
+                        <div class="Card__Content">
+                            <div class="Card__Content__Desc">
+                                <h3 class="Card__Title">La note enchantée</h3>
+                                <p class="Card__Localisation">Charonne</p>
+                            </div>
+                            <span class="Card__Content_Like">
+                                <i class="far fa-heart heart-away"></i>
+                                <i class="fas fa-heart heart-hover"></i>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <!-- Fin de la card du restau la note enchantée -->
+
+                <!-- Début de la card du restau A la française -->
+                <li class="Card">
+                    <a href="#" class="Card__Lien">
+                        <div class="Card__Image">
+                            <img src="/assets/images/a_la_française.jpg" alt="Image du restaurant La note enchantée">
+                        </div>
+                        <div class="Card__Content">
+                            <div class="Card__Content__Desc">
+                                <h3 class="Card__Title">À la française</h3>
+                                <p class="Card__Localisation">Cité Rouge</p>
+                            </div>
+                            <span class="Card__Content_Like">
+                                <i class="far fa-heart heart-away"></i>
+                                <i class="fas fa-heart heart-hover"></i>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <!-- Fin de la card du restau la note enchantée -->
+
+                <!-- Début de la card Le délice des sens -->
+                <li class="Card">
+                    <a href="#" class="Card__Lien">
+                        <div class="Card__Image">
+                            <img src="/assets/images/le_delice_des_sens.jpg"
+                                alt="Image du restaurant Le délice des sens">
+                        </div>
+                        <div class="Card__Content">
+                            <div class="Card__Content__Desc">
+                                <h3 class="Card__Title">Le délice des sens</h3>
+                                <p class="Card__Localisation">Folie-Méricourt</p>
+                            </div>
+                            <span class="Card__Content_Like">
+                                <i class="far fa-heart heart-away"></i>
+                                <i class="fas fa-heart heart-hover"></i>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <!-- Fin de la card du restau la note enchantée -->
 
             </ul>
-            <!-- Fin de la card du restau la palette du goût -->
         </article>
 
     </main>
@@ -71,9 +143,10 @@
     <footer>
         <div class="logo-footer">Ohmyfood</div>
         <ul class="footer__liens">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </footer>
 </body>

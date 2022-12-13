@@ -1,5 +1,51 @@
-#sectionSteps {
+#SectionSteps {
+    padding: 2rem;
+
     & ul {
         display: flex;
+        flex-direction: column;
+        padding: 0;
+
+        li {
+            @include shadow;
+            padding: 1rem 2rem;
+            border-radius: $button-cta-radius;
+            margin-bottom: 2rem;
+            margin-left: 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+                background-color: $violet-clair;
+                i {
+                    color: $violet-primaire;
+                }
+            }
+
+            span.Step__Number {
+                width: 1rem;
+                height: 1rem;
+                position: absolute;
+                left: -1rem; /* 1rem est égal a la moitié du cercle violet*/
+                padding: 0.5rem;
+                background-color: $violet-primaire;
+                color: $txt-fond-sombre;
+                border-radius: $button-cta-radius;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            p {
+                font-weight: 700;
+
+                i {
+                    margin-right: 1rem;
+                    color: $gris-sombre;
+                }
+            }
+
+        }
     }
 }

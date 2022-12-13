@@ -1,0 +1,58 @@
+#ListingRestaurant {
+    padding: 2rem
+}
+
+ul.ContainerCard {
+    @extend %grid-center;
+    padding: 0;
+
+    li.Card {
+        border-radius: $card-radius;
+        margin-bottom: 1rem;
+        @include shadow;
+        
+        &:hover {
+            @include shadow-hover;
+        }
+
+        a.Card__Lien {
+            text-decoration: none;
+            color: inherit;
+
+            .Card__Image {
+                width: 100%;
+                position: relative;
+
+                img {
+                    @include img-fit-cover;
+                    border-radius: $card-radius $card-radius 0 0;
+                }
+
+                .Card__Boxnews {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    padding: 0.5rem 1rem;
+                    background-color: $vert-clair;
+                    color: $txt-fond-vert;
+                    border-radius: $button-radius;
+                  }
+            }
+    
+    
+            .Card__Content {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 1fr auto;
+                padding: 0.5rem 1rem;
+    
+                .Card__Title,
+                .Card__Localisation {
+                    margin: 0.5rem 0;
+                }
+            }
+
+        }
+
+    }
+}

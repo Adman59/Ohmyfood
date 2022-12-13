@@ -22,7 +22,8 @@ main{
 
     #SectionIntro {
         @extend %grid-center;
-        padding: 1em;
+        background-color: $gris-clair;
+        padding: 2rem;
         text-align: center;
     }
 

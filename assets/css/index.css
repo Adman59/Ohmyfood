@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* Import des utilitaires */
 /* Ombre des boutons et des cards */
-main #SectionIntro, main #SectionLocalisation, header {
+main #SectionIntro, main #SectionLocalisation, header, ul.ContainerCard {
   display: grid;
   align-items: center;
   justify-items: center;
@@ -13,13 +13,13 @@ main #SectionIntro, main #SectionLocalisation, header {
   padding: 1em 1.5em;
   color: #ffffff;
   transition: 250ms;
-  box-shadow: 2px 4px 15px #c9c9c9;
+  box-shadow: 2px 4px 15px gainsboro;
 }
 .btn--gradient {
   background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
 }
 .btn--radius {
-  border-radius: 2em;
+  border-radius: 2rem;
 }
 .btn:hover {
   opacity: 0.8;
@@ -57,8 +57,98 @@ ul li {
   list-style-type: none;
 }
 
-#sectionSteps ul {
+#SectionSteps {
+  padding: 2rem;
+}
+#SectionSteps ul {
   display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+#SectionSteps ul li {
+  box-shadow: 2px 4px 15px gainsboro;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#SectionSteps ul li:last-child {
+  background-color: #f5edff;
+}
+#SectionSteps ul li:last-child i {
+  color: #9356DC;
+}
+#SectionSteps ul li span.Step__Number {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: -1rem; /* 1rem est égal a la moitié du cercle violet*/
+  padding: 0.5rem;
+  background-color: #9356DC;
+  color: #ffffff;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#SectionSteps ul li p {
+  font-weight: 700;
+}
+#SectionSteps ul li p i {
+  margin-right: 1rem;
+  color: #353535;
+}
+
+#ListingRestaurant {
+  padding: 2rem;
+}
+
+ul.ContainerCard {
+  padding: 0;
+}
+ul.ContainerCard li.Card {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 2px 4px 15px gainsboro;
+}
+ul.ContainerCard li.Card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+ul.ContainerCard li.Card a.Card__Lien {
+  text-decoration: none;
+  color: inherit;
+}
+ul.ContainerCard li.Card a.Card__Lien .Card__Image {
+  width: 100%;
+  position: relative;
+}
+ul.ContainerCard li.Card a.Card__Lien .Card__Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+ul.ContainerCard li.Card a.Card__Lien .Card__Image .Card__Boxnews {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 0.25rem;
+}
+ul.ContainerCard li.Card a.Card__Lien .Card__Content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem 1rem;
+}
+ul.ContainerCard li.Card a.Card__Lien .Card__Content .Card__Title,
+ul.ContainerCard li.Card a.Card__Lien .Card__Content .Card__Localisation {
+  margin: 0.5rem 0;
 }
 
 /* Import des views */
@@ -80,6 +170,38 @@ main #SectionLocalisation p i {
   padding: 0 0.5em 0 0;
 }
 main #SectionIntro {
-  padding: 1em;
+  background-color: #f5f5f5;
+  padding: 2rem;
   text-align: center;
+}
+
+footer {
+  padding: 2rem;
+  background-color: #353535;
+}
+footer .logo-footer {
+  font-size: 1.125rem;
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+footer ul.footer__liens {
+  padding: 0;
+}
+footer ul.footer__liens li {
+  margin: 1rem 0;
+}
+footer ul.footer__liens li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+footer ul.footer__liens li a:hover {
+  text-decoration: underline;
+}
+footer ul.footer__liens li a i {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
 }
