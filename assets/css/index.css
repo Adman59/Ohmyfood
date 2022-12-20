@@ -1,29 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* Import des utilitaires */
-/* Ombre des boutons et des cards */
-main #SectionIntro, main #SectionLocalisation, header, ul.ContainerCard {
+main #ListingRestaurant ul.ContainerCard, main #SectionIntro, main #SectionLocalisation {
   display: grid;
   align-items: center;
   justify-items: center;
 }
 
-.btn {
-  text-decoration: none;
-  padding: 1em 1.5em;
-  color: #ffffff;
-  transition: 250ms;
+/* Ombre des boutons et des cards */
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat, main #SectionSteps ul li, .Card, .btn {
   box-shadow: 2px 4px 15px gainsboro;
 }
-.btn--gradient {
-  background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
+
+.Card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.btn--radius {
-  border-radius: 2rem;
-}
-.btn:hover {
-  opacity: 0.8;
-  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Image img, header .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 main {
@@ -39,14 +35,31 @@ h1, h2, h3 {
 
 h1 {
   font-size: 2rem;
-}
-h1.Logo {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
 }
 
 h2 {
   font-size: 1.5rem;
+}
+h2.TitleSection {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2.TitleSection--MarginLeft {
+  margin-left: 2rem;
+}
+h2.TitleSection::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 2px;
+  background-color: #99e2d0;
 }
 
 h3 {
@@ -57,107 +70,63 @@ ul li {
   list-style-type: none;
 }
 
-#SectionSteps {
-  padding: 2rem;
-}
-#SectionSteps ul {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-#SectionSteps ul li {
-  box-shadow: 2px 4px 15px gainsboro;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-#SectionSteps ul li:last-child {
-  background-color: #f5edff;
-}
-#SectionSteps ul li:last-child i {
-  color: #9356DC;
-}
-#SectionSteps ul li span.Step__Number {
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  left: -1rem; /* 1rem est égal a la moitié du cercle violet*/
-  padding: 0.5rem;
-  background-color: #9356DC;
-  color: #ffffff;
-  border-radius: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#SectionSteps ul li p {
-  font-weight: 700;
-}
-#SectionSteps ul li p i {
-  margin-right: 1rem;
-  color: #353535;
-}
-
-#ListingRestaurant {
-  padding: 2rem;
-}
-
-ul.ContainerCard {
-  padding: 0;
-}
-ul.ContainerCard li.Card {
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 2px 4px 15px gainsboro;
-}
-ul.ContainerCard li.Card:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-ul.ContainerCard li.Card a.Card__Lien {
+a.Logo {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
   text-decoration: none;
-  color: inherit;
-}
-ul.ContainerCard li.Card a.Card__Lien .Card__Image {
-  width: 100%;
-  position: relative;
-}
-ul.ContainerCard li.Card a.Card__Lien .Card__Image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 1rem 1rem 0 0;
-}
-ul.ContainerCard li.Card a.Card__Lien .Card__Image .Card__Boxnews {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #99e2d0;
-  color: #008766;
-  border-radius: 0.25rem;
-}
-ul.ContainerCard li.Card a.Card__Lien .Card__Content {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem 1rem;
-}
-ul.ContainerCard li.Card a.Card__Lien .Card__Content .Card__Title,
-ul.ContainerCard li.Card a.Card__Lien .Card__Content .Card__Localisation {
-  margin: 0.5rem 0;
+  color: #000000;
+  margin: 1rem 0;
 }
 
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em 1.5em;
+  color: #ffffff;
+  transition: 250ms;
+}
+.btn--gradient {
+  background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
+}
+.btn--radius {
+  border-radius: 2rem;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+}
+
+.Card {
+  margin-bottom: 1rem;
+}
+.Card--radius {
+  border-radius: 1rem;
+}
 /* Import des views */
 /* Début Header */
 header {
-  padding: 1em;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+header .BackToHome {
+  text-decoration: none;
+  color: #000000;
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  font-size: 1.5rem;
+}
+header .hero-img {
+  max-height: 400px;
 }
 
 /* Début Main */
+main {
+  /********* Page interne************/
+}
 main #SectionLocalisation {
   padding: 0;
   background: #eaeaea;
@@ -174,6 +143,207 @@ main #SectionIntro {
   padding: 2rem;
   text-align: center;
 }
+main #SectionSteps {
+  padding: 2rem;
+}
+main #SectionSteps ul {
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media screen and (min-width: 668px) {
+  main #SectionSteps ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1140px) {
+  main #SectionSteps ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+main #SectionSteps ul li {
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  margin-left: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+main #SectionSteps ul li:hover {
+  background-color: #f5edff;
+}
+main #SectionSteps ul li:hover i {
+  color: #9356DC;
+}
+main #SectionSteps ul li span.Step__Number {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: -1rem; /* 1rem est égal a la moitié du cercle violet*/
+  padding: 0.5rem;
+  background-color: #9356DC;
+  color: #ffffff;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #SectionSteps ul li p {
+  font-weight: 700;
+}
+main #SectionSteps ul li p i {
+  margin-right: 1rem;
+  color: #353535;
+}
+main #ListingRestaurant {
+  padding: 2rem;
+}
+main #ListingRestaurant ul.ContainerCard {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+@media screen and (min-width: 668px) {
+  main #ListingRestaurant ul.ContainerCard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1140px) {
+  main #ListingRestaurant ul.ContainerCard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien {
+  text-decoration: none;
+  color: inherit;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Image {
+  width: 100%;
+  position: relative;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Image img {
+  border-radius: 1rem 1rem 0 0;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Image .Card__Boxnews {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 0.25rem;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Title,
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Localisation {
+  margin: 0.5rem 0;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Content_Like {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Content_Like i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5rem;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Content_Like i.heart-hover {
+  opacity: 0;
+}
+main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Content_Like:hover i.heart-hover {
+  opacity: 1;
+}
+main .Header_Menu {
+  position: relative;
+  margin-top: -2rem;
+  background-color: #ffffff;
+  border-radius: 2rem 2rem 0 0;
+  padding: 2rem 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+@media screen and (min-width: 668px) {
+  main .Header_Menu {
+    padding: 2rem 2rem 0;
+  }
+}
+main .Header_Menu .Header_Like {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+main .Header_Menu .Header_Like i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5rem;
+}
+main .Header_Menu .Header_Like i.heart-hover {
+  opacity: 0;
+}
+main .Header_Menu .Header_Like:hover i.heart-hover {
+  opacity: 1;
+}
+main #SectionMenu {
+  padding: 2rem 1rem 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media screen and (min-width: 668px) {
+  main #SectionMenu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 2rem 2rem 0;
+  }
+}
+@media screen and (min-width: 1140px) {
+  main #SectionMenu {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+main #SectionMenu section.Menu ul.ListingMenu {
+  padding: 0;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat .ListingMenu__Plat__Description {
+  overflow: hidden;
+  white-space: nowrap;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat .ListingMenu__Plat__Description h3, main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat .ListingMenu__Plat__Description p {
+  margin: 0.5rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat p.ListingMenu__Plat__Price {
+  font-weight: 700;
+}
+main section.CommandeCTA {
+  padding: 2rem 0 3rem;
+  text-align: center;
+}
 
 footer {
   padding: 2rem;
@@ -186,11 +356,36 @@ footer .logo-footer {
   color: #ffffff;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 668px) {
+  footer .logo-footer {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
 footer ul.footer__liens {
   padding: 0;
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media screen and (min-width: 668px) {
+  footer ul.footer__liens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1140px) {
+  footer ul.footer__liens {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 footer ul.footer__liens li {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+}
+@media screen and (min-width: 1140px) {
+  footer ul.footer__liens li {
+    text-align: center;
+  }
 }
 footer ul.footer__liens li a {
   color: #ffffff;

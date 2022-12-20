@@ -8,13 +8,34 @@ footer {
         font-weight: $font-regular;
         color: $txt-fond-sombre;
         margin-bottom: 1rem;
+
+        @media screen and (min-width: $Media-Tablette) {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
     }
 
     ul.footer__liens {
         padding: 0;
+        display: grid;
+        padding: 0;
+        @include GridRepeat(1);
+
+        @media screen and (min-width: $Media-Tablette) {
+            @include GridRepeat(2);
+        }
+
+        @media screen and (min-width: $Media-Desktop) {
+            @include GridRepeat(4);
+        }
 
         li {
-            margin: 1rem 0;
+            margin: 0.5rem 0;
+
+            @media screen and (min-width: $Media-Desktop) {
+                text-align: center;
+            }
 
             a {
                 color: $txt-fond-sombre;
