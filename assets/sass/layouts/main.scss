@@ -147,7 +147,8 @@ main{
                             position: absolute;
                             top: 0;
                             left: 0;
-                            font-size: 1.5rem;
+                            font-size: 1.25rem;
+                            transition: color 0.2s ease-in-out;
 
                             &.heart-hover {
                                 opacity: 0;
@@ -156,6 +157,12 @@ main{
 
                         &:hover i.heart-hover {
                             opacity: 1;
+                            color: transparent;
+                            background: linear-gradient(160deg, $rose-secondaire 0%, $violet-primaire 100%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            transition: opacity 0.3s ease-in-out;
                         }
                     }
                 }
@@ -203,6 +210,12 @@ main{
 
             &:hover i.heart-hover {
                 opacity: 1;
+                color: transparent;
+                background: linear-gradient(160deg, $rose-secondaire 0%, $violet-primaire 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: opacity 0.3s ease-in-out;
             }
         }
     }
@@ -229,14 +242,21 @@ main{
 
                 & li.ListingMenu__Plat {
                     @extend %shadow;
-                    padding: 0.5rem 1rem;
                     border-radius: $card-radius;
                     margin-bottom: 1rem;
                     position: relative;
                     display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                    gap: 20px;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    animation: introduce .8s;
+                    animation-fill-mode: both;
+
+                    @for $i from 0 to 9 {
+                        &:nth-child(#{$i}) {
+                          animation-delay:  0.2s * $i;
+                        }
+                      }
 
                     & .ListingMenu__Plat__Description {
                         overflow: hidden;
@@ -253,7 +273,35 @@ main{
 
                     & p.ListingMenu__Plat__Price {
                         font-weight: $font-bold;
+                        margin-left: auto;
+                        margin-bottom: 0.5rem;
+                        display: flex;
+                        align-items: flex-end;
                      }
+
+                    & span.ListingMenu__Plat__Check {
+                        font-size: 1.5rem;
+                        color: $txt-fond-sombre;
+                        background-color: $vert-clair;
+                        width: 2rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: -4rem;
+                        transition: margin-right 0.5s;
+                    }
+
+                    &:hover span.ListingMenu__Plat__Check {
+                        margin-right: 0;
+
+                        i {
+                            animation: spinRotate .9s;
+                        }
+                    }
+
+                    & > * {
+                        padding: 0.5rem 1rem;
+                    }
 
                 }
             }

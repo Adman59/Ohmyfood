@@ -1,6 +1,24 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* Import des utilitaires */
+@keyframes introduce {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes spinRotate {
+  0% {
+    transform: rotate(-360deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+}
 main #ListingRestaurant ul.ContainerCard, main #SectionIntro, main #SectionLocalisation {
   display: grid;
   align-items: center;
@@ -255,13 +273,20 @@ main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Cont
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  transition: color 0.2s ease-in-out;
 }
 main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Content_Like i.heart-hover {
   opacity: 0;
 }
 main #ListingRestaurant ul.ContainerCard a.Card__Lien .Card__Content .Card__Content_Like:hover i.heart-hover {
   opacity: 1;
+  color: transparent;
+  background: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in-out;
 }
 main .Header_Menu {
   position: relative;
@@ -297,6 +322,12 @@ main .Header_Menu .Header_Like i.heart-hover {
 }
 main .Header_Menu .Header_Like:hover i.heart-hover {
   opacity: 1;
+  color: transparent;
+  background: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in-out;
 }
 main #SectionMenu {
   padding: 2rem 1rem 0;
@@ -319,14 +350,41 @@ main #SectionMenu section.Menu ul.ListingMenu {
   padding: 0;
 }
 main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat {
-  padding: 0.5rem 1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  animation: introduce 0.8s;
+  animation-fill-mode: both;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(0) {
+  animation-delay: 0s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(1) {
+  animation-delay: 0.2s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(2) {
+  animation-delay: 0.4s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(3) {
+  animation-delay: 0.6s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(4) {
+  animation-delay: 0.8s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(5) {
+  animation-delay: 1s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(6) {
+  animation-delay: 1.2s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(7) {
+  animation-delay: 1.4s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:nth-child(8) {
+  animation-delay: 1.6s;
 }
 main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat .ListingMenu__Plat__Description {
   overflow: hidden;
@@ -339,6 +397,30 @@ main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat .ListingMenu_
 }
 main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat p.ListingMenu__Plat__Price {
   font-weight: 700;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat span.ListingMenu__Plat__Check {
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #99e2d0;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -4rem;
+  transition: margin-right 0.5s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:hover span.ListingMenu__Plat__Check {
+  margin-right: 0;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat:hover span.ListingMenu__Plat__Check i {
+  animation: spinRotate 0.9s;
+}
+main #SectionMenu section.Menu ul.ListingMenu li.ListingMenu__Plat > * {
+  padding: 0.5rem 1rem;
 }
 main section.CommandeCTA {
   padding: 2rem 0 3rem;
