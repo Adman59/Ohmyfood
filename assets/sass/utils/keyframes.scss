@@ -17,3 +17,15 @@
         transform: rotate(0deg);
     }
 }
+
+@keyframes loaderAnim {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes disappear {
+    to {
+        transform: scale(0);
+    }
+}
