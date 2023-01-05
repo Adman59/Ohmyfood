@@ -1,9 +1,21 @@
 /* Début Header */
 header{
-    @extend %grid-center;
-    padding: 1em;
-    & .logo{
-        font-size: 2rem;
-        font-family: 'Shrikhand', cursive;
+    // @extend %grid-center;
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    & .BackToHome {
+        text-decoration: none;
+        color: $txt-fond-clair;
+        position: absolute;
+        left: 1rem;
+        top: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    & .hero-img {
+        @extend %img-fit-cover;
+        max-height: 400px;
     }
 }

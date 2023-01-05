@@ -1,0 +1,12 @@
+.Card {
+    margin-bottom: 1rem;
+    @extend %shadow;
+        
+    &--radius{
+        border-radius: $card-radius;
+    }
+
+    &:hover {
+        @extend %shadow-hover;
+    }
+}

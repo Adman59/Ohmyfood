@@ -1,0 +1,62 @@
+main {
+    font-size: $txt-font-size;
+    font-family: $font-primary;
+}
+
+h1, h2, h3 {
+    color: $txt-fond-clair;
+    font-weight: $font-bold; 
+    font-family: $font-primary;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    font-family: $font-secondary;
+    font-weight: $font-regular;
+}
+
+h2 {
+    font-size: $h2-font-size;
+
+    &.TitleSection {
+        font-size: $h3-font-size;
+        text-transform: uppercase;
+        font-weight: $font-regular;
+        position: relative;
+        padding-bottom: 0.5rem;
+
+        &--MarginLeft {
+            margin-left: 2rem;
+        }
+
+        &::before {
+            content:"";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 3rem;
+            height: 2px;
+            background-color: $vert-clair;
+        }
+    }
+}
+
+h3 {
+    font-size: $h3-font-size;
+}
+
+ul {
+    li {
+        list-style-type: none;
+    }
+}
+
+a.Logo {
+    display: inline-block;
+    font-size: $h1-font-size;
+    font-family: $font-secondary;
+    font-weight: $font-regular;
+    text-decoration: none;
+    color: $txt-fond-clair;
+    margin: 1rem 0;
+}

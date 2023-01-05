@@ -5,8 +5,11 @@
 @import "./utils/keyframes";
 @import "./utils/mixins";
 @import "./utils/placeholders";
+@import "./utils/typography.scss";
 
-
+@import "./components/btn.scss";
+@import "./components/cards.scss";
+@import "./components/loader.scss";
 /* Import des views */
 
 @import "./layouts/header.scss";

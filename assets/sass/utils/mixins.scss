@@ -1,0 +1,9 @@
+@mixin GridRepeat($valeur) {
+
+  grid-template-columns: repeat($valeur, 1fr);
+}
+
+// @mixin GridPosition($RowStart,$RowEnd,$ColumnStart,$ColumnEnd){
+//   grid-row: $RowStart unquote("/") $row-end;
+//   grid-column: $ColumnStart unquote("/") $ColumnEnd;
+// }
