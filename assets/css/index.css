@@ -26,7 +26,8 @@
 }
 @keyframes disappear {
   to {
-    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
   }
 }
 main #ListingRestaurant ul.ContainerCard, main #SectionIntro, main #SectionLocalisation {
@@ -143,7 +144,7 @@ a.Logo {
   background-color: #ffffff;
   width: 100%;
   height: 100vh;
-  z-index: 9;
+  z-index: 1;
   animation: disappear 200ms 3s forwards;
 }
 .loader:before {
